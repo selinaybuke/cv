@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact</title>
+
+    </head>
+
+    <body>
+        <h1>İletişim Bilgilerim</h1>
+        <p>Adres Bilgilerim</p>
+        <a href="mailto:selinaybuke.erdogan@bilgeadamakademi.com">selinaybuke.erdogan@bilgeadamakademi.com</a>
+        <p>Telefon Numaram</p>
+        <a href="index.html">Homapage</a>
+        <hr>
+        <form action="mailto:selinaybuke.erdogan@bilgeadamakademi.com" enctype="text/plain" method="post">
+            <label for="contact">Your Name:</label>
+            <input type="text" name="name"><br>
+            <label for="contact">Your Email:</label>
+            <input type="text" name="email">
+            <br>
+            <label for="metin">Your Message</label><br>
+            <textarea name="metin" id="metin" placeholder="Send a message" ></textarea><br>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
+<!-- enctype encoding  ile text/plain yaprsa kdüz metin olarak aatar/utf-8deki o cod ısmı gibi olanı düzeliyor-->
+<!-- aciton yanına emthod eklemezsek otomatik get methodu olur o yüzden url
+     de şifre gözükür post methodu kullanırsasn gözükmez -->

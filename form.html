@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <!--/pizza yerinde arayacak-->
+  <!--label içine yazdıgımız for 'un input id="içindeyazan' kullanıcı adına tıkalyına gerekli etiketlnen yer göz
+gözüküyor--><!--ctrl ö yrum satırı-->
+  <body>
+    <h1>Form Demo</h1>
+    <!--Bu yanı basit form dısısnda oldugu için-->
+    <form action="/pizza">
+      <input type="text" placeholder="Kullanici_Adi" id="isim" name="q" />
+      <label for="isim">:Kullanici Adi</label>
+      <!-- /?q=köpek -->
+      <br /><br />
+      <label for="pass">Password:</label>
+      <input type="password" placeholder="Password" id="pass" name="parola" />
+      <br /><br />
+      <label for="email">Email:</label>
+      <input type="email" placeholder="Email" id="email" name="mail" />
+      <br /><br />
+      <label for="col">Color:</label>
+      <input type="color" id="col" name="color" />
+      <br /><br />
+      <label for="num">Number:</label>
+      <input type="number" placeholder="Number" id="num" name="number" />
+      <button type="submit">Gönder</button
+      ><!--bu pizzaya iletiyor-->
+      <!-- <button type="button">Normal Button</button> -->
+      <!--bunla-->
+    </form>
+    <br />
+    <hr />
+    <br />
+    <form action="https://www.reddit.com/search">
+      <input type="text" name="q" placeholder="Search_Reddit" />
+      <button>Search Reddit</button>
+      <!-- https://www.reddit.com/search/?q=kedicik searchden sonrasını yapamayız search olan yere gödneririr o yüzdenm searche akdar-->
+    </form>
+    <br />
+    <form action="https://www.google.com/search">
+      <input type="text" name="q" placeholder="Search_Google" />
+      <button>Search Google</button>
+    </form>
+    <br />
+    <form action="https://www.youtube.com/results">
+      <input type="text" name="search_query" placeholder="Youtube_Search" />
+      <button>Youtube Search</button>
+    </form>
+    <br />
+    <form action="/birds">
+      <label for="agree">Kabul Ediyorum</label>
+      <input type="checkbox" name="agree" id="agree" checked />
+      <label for="onay">Onayliyorum</label>
+      <input type="checkbox" name="onay" id="onay" />
+      <button>Gönder</button>
+    </form>
+    <!-- http://127.0.0.1:5500/birds?agree=on ayrı ayrı marti kartal karga diye göstermiyor birds genel olarak döndürdü -->
+    <form action="/kuşlar">
+      <label for="birds">Marti:</label>
+      <input type="radio" name="birds" id="birds" value="marti" /><br />
+      <label for="birds2">Karga:</label>
+      <input type="radio" name="birds" id="birds2" value="kartal" /><br />
+      <label for="birds3">Kartal:</label>
+      <input type="radio" name="birds" id="birds3" value="karga" />
+      <br />
+      <button>Yolla</button>
+    </form>
+    <form>
+      <h3>Input</h3>
+      <input type="checkbox" name="boyut" id="kabul" />
+      <label for="kabuls">Kabul Ediyorum</label><br />
+      <label for="beden">XS:</label>
+      <input type="radio" name="beden" id="beden" value="XS" />
+      <label for="beden2">M:</label>
+      <input type="radio" name="beden" id="beden2" value="M" />
+      <label for="beden3">L:</label>
+      <input type="radio" name="beden" id="beden3" value="L" /><br />
+      <button>Submit</button>
+    </form>
+    <form action="hayvanlar">
+      <label for="hayvan">Hayvanlar</label><br />
+      <select name="pets" id="hayvan">
+        <option value="">Hayvaninizi Seçiniz></option>
+        <!-- boş dummy kukla -->
+        <option value="aslan" selected>Aslan</option>
+        <!-- Selected yazaraka slanın ilk cıkmasını bekliyoruz. -->
+
+        <option value="balık">Balık</option>
+        <option value="Kuş">Kuş</option>
+      </select>
+      <button>Submit</button>
+    </form>
+    <hr />
+    <form action="">
+      <label for="range">Evdeki peynir miktari</label>
+      <input
+        type="range"
+        name="peynir"
+        id="range"
+        miin="10"
+        max="120"
+        step="5"
+        value="75"
+      />
+      <!-- başlangıç değeri -->
+      <button>Yolla</button><hr>
+    </form>
+    <form action="/isim">
+      <label for="metin">Mesajiniz</label><br /><br>
+      <textarea name="metin" id="metin" cols="20" rows="10">
+Buraya mesajinizi giriniz
+      </textarea>
+      <input type="submit" />
+    </form">
+    <hr>
+    <form action="">
+      <input type="text" placeholder="Kullanici adi" required minlength="5" maxlength="10">
+      <input type="password" placeholder="password" required minlength="3" maxlength="5">
+      <button>Yolla</button>
+
+    </form>
+    <hr>
+    <form>
+      <h1>Race Registration!</h1>
+      <div>
+      <label for="isim">First Name</label>
+      <input type="text" id="isim" name="fname" placeholder="First_name" required minlength="5" maxlength="10"/>
+      <label for="isim">Last Name</label>
+      <input type="text1" id="isim" name="lname" placeholder="Last_name"  required minlength="5" maxlength="10"/>  
+      </div>
+      <h1>Select a Race:</h1>
+      <label for="radio">Fun Run 5k</label>
+      <input type="radio" id="radio" name="radio" value="funrun"><br>
+      <label for="radio1">Half Marathon</label>
+      <input type="radio" id="radio1" name="radio" value="half"><br>
+      <label for="radio2">Full Marathon</label>
+      <input type="radio" id="radio2" name="radio" value="full"><br>
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required/>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required minlength="5" maxlength="10"/>
+      <br>
+      <label for="age">Select Age Group</label>
+      <select name="age" id="age">
+        <option value="under18">Under 18</option>
+        <option value="üst25">25+</option>
+        <option value="üst50">50+</option>
+      </select><br>
+      <button>Register!</button>
+
+      <!-- <div>2 input text</div>
+      required email password
+      select optionacılır pencere -->
+    </form>
+  </body>
+</html>
+<!-- http://127.0.0.1:5500/Personal%20html/form.html?fname=ssssssssss&lname=ssssssssss&radio=funrun&email=selinaybukeerdogan%40gmail.com&password=ssssssssss&age=under18 -->
+<!-- validation -->
+<!-- regexp yapısıda vardaha sonra öğrenilcek -->
+<!-- required: Form gönderilmeden önce bir form alanının doldurulmasının gerekip gerekmediğini belirtir. -->
+<!-- http://127.0.0.1:5500/Personal%20html/form.html?peynir=90 -->
+<!-- for ve id aynı olmalı -->
+<!-- ctrl alt aşağı tıklayrakaynı şeyleri seçmeni sağla -->
+<!-- https://www.google.com/search     ?q     =search+google+action&sxsrf=APq-WBsdiLs3AH9PwFHPEay5k9j27tocFA%3A1648972002512&source=hp&ei=4lBJYvjTGtSJxc8PueGMUA&iflsig=AHkkrS4AAAAAYkle8pDYS6BBaJ5qlrMhOLnUAhiY_K4x&ved=0ahUKEwj4zMyzs_f2AhXURPEDHbkwAwoQ4dUDCAc&uact=5&oq=search+google+action&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEBYQHjIGCAAQFhAeMgYIABAWEB4yBggAEBYQHjoECCMQJzoGCCMQJxATOgQIABBDOgoILhDHARDRAxBDOgsILhCABBCxAxCDAToLCAAQgAQQsQMQgwE6DgguEIAEELEDEMcBEKMCOggIABCABBCxAzoFCAAQgAQ6BwgAELEDEEM6CAguEIAEELEDOhAILhCxAxCDARDHARDRAxAKOgUIABDLAVAAWNsdYLQfaABwAHgAgAGEAYgB2g-SAQUxMC4xMJgBAKABAQ&sclient=gws-wiz -->
+<!-- https://www.youtube.com/results ?search_query =fesle%C4%9Fen+soslu+makarna+tarifi -->
+<!-- http://127.0.0.1:5500/Personal%20html/form.html?agree=on&beden=L   value ile lARGE TIKLADIGIMIZ İÇİN  LYE GÖNDERDİ-->
